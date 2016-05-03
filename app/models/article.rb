@@ -11,7 +11,20 @@ class Article < ActiveRecord::Base
   end
 
   def generateBibtex
-	  s= "@article{" << self.key << ",\n" << "\tauthor = {" << self.author << "},\n" << "\ttitle = {" << self.title << "},\n" << "\tjournal = {" << self.journal << "},\n" << "\tyear = {" << self.year.to_s << "},\n    }\n"
+	  s= "@article{" << self.key << ",\n" 
+    s << "\tauthor = {" << self.author << "},\n" 
+    s << "\ttitle = {" << self.title << "},\n" 
+    s << "\tjournal = {" << self.journal << "},\n" 
+    s << "\tyear = {" << self.year.to_s 
+    s << "},\n"
+    s << "\tvolume = {" << self.volume << "},\n" unless self.volume == ""
+    s << "\tnumber = {" << self.number << "},\n" unless self.number == ""
+    s << "\tpages = {" << self.pages << "},\n" unless self.pages == ""
+    s << "\tmonth = {" << self.month << "},\n" unless self.month == ""
+    s << "\tnote = {" << self.note << "},\n" unless self.note == ""
+    s << "\tkey = {" << self.akey << "},\n" unless self.akey == ""
+    s << "    }\n"
+
   end
 
 end
