@@ -11,6 +11,24 @@ class Book < ActiveRecord::Base
   end
 
   def generateBibtex
-	s= "@book{" << self.key << ",\n" << "\tauthor = {" << self.author << "},\n" << "\ttitle = {" << self.title << "},\n" << "\tpublisher = {" << self.publisher << "},\n" << "\tyear = {" << self.year.to_s << "},\n    }\n"
+	   s= "@book{" << self.key << ",\n" << "\tauthor = {" 
+     s << self.author << "},\n" 
+     s << "\ttitle = {" << self.title << "},\n" 
+     s << "\tpublisher = {" 
+     s << self.publisher 
+     s << "},\n" 
+     s << "\tyear = {" 
+     s << self.year.to_s 
+     s << "},\n"
+     s << "\tvolume = {" << self.volume << "},\n" unless self.volume == ""
+     s << "\tseries = {" << self.series << "},\n" unless self.series == ""
+     s << "\taddress = {" << self.address << "},\n" unless self.address == ""
+     s << "\tedition = {" << self.edition << "},\n" unless self.edition == ""
+     s << "\tmonth = {" << self.month << "},\n" unless self.month == ""
+     s << "\tnote = {" << self.note << "},\n" unless self.note == ""
+     s << "\tkey = {" << self.bkey << "},\n" unless self.bkey == ""
+
+     s << "    }\n"
+     
   end
 end
