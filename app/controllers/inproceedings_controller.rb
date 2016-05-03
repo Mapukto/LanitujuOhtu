@@ -29,7 +29,7 @@ class InproceedingsController < ApplicationController
 
     respond_to do |format|
       if @inproceeding.save
-        format.html { redirect_to inproceedings_path, notice: 'Inproceeding was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Inproceeding was successfully created.' }
         format.json { render :show, status: :created, location: @inproceeding }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class InproceedingsController < ApplicationController
   def destroy
     @inproceeding.destroy
     respond_to do |format|
-      format.html { redirect_to inproceedings_url, notice: 'Inproceeding was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Inproceeding was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
