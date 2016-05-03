@@ -15,6 +15,7 @@
   <tbody>
   <% @search.each do |s| %>
       <tr>
+        
         <td><%= s.author %></td>
         <td><%= s.title %></td>
         <td><%= s.year %></td>
@@ -35,6 +36,5 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
 
 
