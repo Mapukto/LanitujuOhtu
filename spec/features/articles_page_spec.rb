@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 describe "Articles page" do
-  it "Has no articles when none are created" do
-    visit articles_path
-    expect(page).to have_content 'Total number of articles: 0'
-  end
   
   describe "With a single article on the page" do
     before :each do
