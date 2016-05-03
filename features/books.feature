@@ -4,11 +4,11 @@ Feature: Book Page
 	As a user
 	I should go to the books page
 
-	Scenario: Opens the index page
-		Given I am on the main page
-		And there exists a book in the database
-		When I press the Books link
-		Then I should get to the books page that shows all the books and their bibtext
+#	Scenario: Opens the index page
+#		Given I am on the main page
+#		And there exists a book in the database
+#		When I press the Books link
+#		Then I should get to the books page that shows all the books and their bibtext
 
 	Scenario: Adds a new book
 		Given I am on the new book page

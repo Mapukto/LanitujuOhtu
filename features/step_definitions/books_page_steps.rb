@@ -49,13 +49,6 @@ Then /^Page should go to listing of all books and contain correct bibtex$/  do
 							         }")
 end
 
-When(/^I press Destroy on the specified book$/) do
-	click_on('Destroy')
-
-end
-
-
-
 Then(/^Page should refresh and the book should no longer exist$/) do
 	expect(page).to_not have_content("@book{hu:1999:boo1,
 				           author = {HupsuNimi},
@@ -79,9 +72,9 @@ Given /^I am on books page$/ do
 	visit books_path
 end
 
-Given /^I press 'edit'$/ do
-	click_on('Edit')
-end
+#Given /^I press 'edit'$/ do
+#	click_on('Edit')
+#end
 
 Given /^I fill in 'Tags' with 'algorithm'$/ do
 	fill_in 'Tags', :with => "algorithm"

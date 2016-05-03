@@ -4,5 +4,7 @@ FactoryGirl.define do
     year   2009
     title  "ohtuPruju"
     journal "ReadMe"
+    volume "asd"
+    
   end
 end
