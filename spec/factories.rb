@@ -7,4 +7,11 @@ FactoryGirl.define do
     volume "asd"
     
   end
+
+  factory :inproceedin do
+    author "Cat"
+    title "Fish"
+    booktitle "Food"
+    year 2008
+  end
 end
