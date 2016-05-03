@@ -16,13 +16,6 @@
   def new
     @article = Article.new
   end
-  def showall
-    @articles = Article.all
-    @books = Book.all
-    @inproceedings = Inproceeding.all
-    render :layout => false
-
-  end
 
   # GET /articles/1/edit
   def edit
