@@ -11,6 +11,6 @@ class Inproceeding < ActiveRecord::Base
   end
 
   def generateBibtex
-	s= "@inproceeding{" << self.key << ",\n" << "\tauthor = {" << self.author << "},\n" << "\ttitle = {" << self.title << "},\n" << "\tbooktitle = {" << self.booktitle << "},\n" << "\tyear = {" << self.year.to_s << "},\n}\n"
+	s= "@inproceeding{" << self.key << ",\n" << "\tauthor = {" << self.author << "},\n" << "\ttitle = {" << self.title << "},\n" << "\tbooktitle = {" << self.booktitle << "},\n" << "\tyear = {" << self.year.to_s << "},\n    }\n"
   end
 end
