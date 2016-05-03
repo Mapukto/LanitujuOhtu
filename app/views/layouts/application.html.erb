@@ -12,6 +12,7 @@
   <li><%= link_to 'references', root_path %></li>
   <li><%= link_to 'plain text', showall_path %></li>
   <li><%= link_to 'create new reference', :controller => :references, :action => :createanynew%></li>
+  <li><%= link_to 'download bibtex', "/raw" %></li>
 </ul>
 <div>
   <%= form_tag('/search')  do %>
@@ -21,10 +22,6 @@
 </div>
 
 <%= yield %>
-
-<div>
-  <%= link_to "download bibtex", "/raw"%>
-</div>
 
 </body>
 </html>

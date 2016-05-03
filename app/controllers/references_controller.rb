@@ -9,6 +9,5 @@ class ReferencesController < ApplicationController
     render :layout => false
   end
   def createanynew
-
   end
 end
