@@ -12,6 +12,5 @@ Feature: References Page
 
   Scenario: Showall shows bibtexts of all references
     Given I am on the main page
-    And I press 'show all'
     When there exists references in the database
     Then Page should show bibtexts for all references
