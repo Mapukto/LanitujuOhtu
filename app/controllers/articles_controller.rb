@@ -69,6 +69,6 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:author, :title, :journal, :year, :tags)
+      params.require(:article).permit(:author, :title, :journal, :year, :tags, :volume, :number, :pages, :month, :note, :akey)
     end
 end
