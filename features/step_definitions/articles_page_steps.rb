@@ -11,7 +11,7 @@ When /^I press the Article link$/ do
 end
 
 Then /^I should get to the articles page that shows all the articles and their bibtext$/ do
-  expect(page).to have_content("@article{Rotta:1998:art1, author = {Rotta}, title = {Pilaantuneiden elintarvikkeiden hyötykäyttö}, journal = {Kaatopaikka ympäristöystävällisen kierrätyksen lähtökohtana}, year = {1998}")
+  expect(page).to have_content("@article{ro:1998:art1, author = {Rotta}, title = {Pilaantuneiden elintarvikkeiden hyötykäyttö}, journal = {Kaatopaikka ympäristöystävällisen kierrätyksen lähtökohtana}, year = {1998}")
 end
 
 Given /^I am on the new article page$/ do
@@ -31,7 +31,7 @@ end
 
 Then /^Should go to list of articles and show the details of new article$/ do
   expect(page).to have_content("Article was successfully created.")
-  expect(page).to have_content("@article{Jeesus:23:art1, author = {Jeesus}, title = {Armo}, journal = {Kristityt}, year = {23}")
+  expect(page).to have_content("@article{je:23:art1, author = {Jeesus}, title = {Armo}, journal = {Kristityt}, year = {23}")
 end
 
 Given /^I fill new article form without title$/ do
@@ -51,7 +51,7 @@ end
 
 Then /^Should not create new article$/ do
   visit articles_path
-  expect(page).to_not have_content("@article{Jesse:1878:art1, author = {Jesse}, title = {""}, journal = {Journaali}, year = {1878}")
+  expect(page).to_not have_content("@article{je:1878:art1, author = {Jesse}, title = {""}, journal = {Journaali}, year = {1878}")
 end
 
 Given /^there exists an article without tag in the database$/ do

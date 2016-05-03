@@ -26,7 +26,7 @@ RSpec.describe Article, type: :model do
     it "Key is generated properly" do
       a = Article.first
       
-      expect(a.key).to eq("Luke:2009:art1")
+      expect(a.key).to eq("lu:2009:art1")
     end
     
   end

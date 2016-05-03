@@ -7,7 +7,7 @@ class Book < ActiveRecord::Base
                                    greater_than_or_equal_to: 0 }
 
   def key
-    s = "" << self.author << ":" << self.year.to_s << ":" << "boo" << self.id.to_s
+    s = "" << self.author.downcase.first(2) << ":" << self.year.to_s << ":" << "boo" << self.id.to_s
   end
 
   def generateBibtex
