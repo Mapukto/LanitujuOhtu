@@ -12,10 +12,9 @@ Rails.application.routes.draw do
 
   get '/showall', to: 'references#showall'
   get '/raw', to: 'file#downloadbibtex'
-<<<<<<< HEAD
-=======
   post '/search', to: 'search#index'
->>>>>>> 019b974e26ebc8e6f628081aa5077485e1e0088e
+  get '/createanynew', to: 'references#createanynew'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

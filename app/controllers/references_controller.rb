@@ -8,4 +8,7 @@ class ReferencesController < ApplicationController
     @references = Article.all + Book.all + Inproceeding.all
     render :layout => false
   end
+  def createanynew
+
+  end
 end

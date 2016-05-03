@@ -11,6 +11,7 @@
 <ul class="nav">
   <li><%= link_to 'references', root_path %></li>
   <li><%= link_to 'plain text', showall_path %></li>
+  <li><%= link_to 'create new reference', :controller => :references, :action => :createanynew%></li>
 </ul>
 <div>
   <%= form_tag('/search')  do %>
@@ -25,12 +26,5 @@
   <%= link_to "download bibtex", "/raw"%>
 </div>
 
-
-<<<<<<< HEAD
-<div>
-  <%= link_to "Raw", "/copypaste"%>
-</div>
-=======
->>>>>>> 019b974e26ebc8e6f628081aa5077485e1e0088e
 </body>
 </html>
