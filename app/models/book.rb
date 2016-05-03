@@ -7,10 +7,18 @@ class Book < ActiveRecord::Base
                                    greater_than_or_equal_to: 0 }
 
   def key
-    s = "" << self.author << ":" << self.year.to_s << ":" << "boo" << self.id.to_s
+    s = "" << self.author.downcase.first(3) << ":" << self.year.to_s << ":" << "boo" << self.id.to_s
   end
 
   def generateBibtex
-	s= "@book{" << self.key << ",\n" << "\tauthor = {" << self.author << "},\n" << "\ttitle = {" << self.title << "},\n" << "\tpublisher = {" << self.publisher << "},\n" << "\tyear = {" << self.year.to_s << "},\n    }\n"
+	   s= "@book{" << self.key << ",\n" << "\tauthor = {" 
+     s << self.author << "},\n" 
+     s << "\ttitle = {" << self.title << "},\n" 
+     s << "\tpublisher = {" 
+     s << self.publisher 
+     s << "},\n" 
+     s << "\tyear = {" 
+     s << self.year.to_s 
+     s << "},\n}\n"
   end
 end
