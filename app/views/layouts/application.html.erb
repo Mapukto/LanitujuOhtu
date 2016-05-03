@@ -9,15 +9,13 @@
 <body>
 
 <ul class="nav">
-  <li><%= link_to 'articles', articles_path %></li>
-  <li><%= link_to 'books', books_path %></li>
-  <li><%= link_to 'inproceedings', inproceedings_path %></li>
-  <li><%= link_to 'show all', showall_path %></li>
+  <li><%= link_to 'references', root_path %></li>
+  <li><%= link_to 'plain text', showall_path %></li>
 </ul>
 <div>
   <%= form_tag('/search')  do %>
       <%= text_field_tag :search, params[:search]%>
-      <%= submit_tag "Etsi", :name => nil  %>
+      <%= submit_tag "Search", :name => nil  %>
   <% end %>
 </div>
 
