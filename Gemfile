@@ -49,7 +49,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'launchy'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 end
 
