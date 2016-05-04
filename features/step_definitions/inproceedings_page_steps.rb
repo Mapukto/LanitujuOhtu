@@ -46,7 +46,6 @@ end
 
 Given /^I am on inproceedings page$/ do
   visit root_path
-  save_and_open_page
 end
 
 When /^I press 'destroy' button$/ do

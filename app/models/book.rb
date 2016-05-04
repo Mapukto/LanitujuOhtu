@@ -28,7 +28,7 @@ class Book < ActiveRecord::Base
      s << "\tnote = {" << self.note << "},\n" unless self.note == ""
      s << "\tkey = {" << self.bkey << "},\n" unless self.bkey == ""
 
-     s << "    }\n"
+     s << "}\n"
      
   end
 end
