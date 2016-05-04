@@ -22,7 +22,7 @@ class Article < ActiveRecord::Base
     s << "\tmonth = {" << self.month << "},\n" unless self.month == ""
     s << "\tnote = {" << self.note << "},\n" unless self.note == ""
     s << "\tkey = {" << self.akey << "},\n" unless self.akey == ""
-    s << "    }\n"
+    s << "}\n"
     
 
   end

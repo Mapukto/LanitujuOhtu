@@ -43,6 +43,7 @@ class InproceedingsController < ApplicationController
   def update
     respond_to do |format|
       if @inproceeding.update(inproceeding_params)
+        @inproceeding.generateBibtex
         format.html { redirect_to @inproceeding, notice: 'Inproceeding was successfully updated.' }
         format.json { render :show, status: :ok, location: @inproceeding }
       else
