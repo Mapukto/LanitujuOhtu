@@ -30,6 +30,10 @@ When /^I press 'create inproceeding' button$/ do
   click_button('Create Inproceeding')
 end
 
+Then /^I see the proper information$/ do
+  expect(page).to have_content("")
+end
+
 Then /^Should go to list of inproceedings and show the new inproceeding$/ do
   expect(page).to have_content("Inproceeding was successfully created.")
   expect(page).to have_content("eding{ko:1765:inp1, author = {Koira}, title = {Kevät}, booktitle = {Vuodenajat}, year = {1765}")
