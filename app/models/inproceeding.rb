@@ -25,7 +25,7 @@ class Inproceeding < ActiveRecord::Base
   s << "\tnote = {" << self.note << "},\n" unless self.note == ""
   s << "\tikey = {" << self.ikey << "},\n" unless self.ikey == ""
   
-  s << "   }\n"
+  s << "}\n"
   
   end
 end
