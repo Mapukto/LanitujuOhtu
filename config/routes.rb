@@ -10,9 +10,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'references#index'
 
+
   get '/showall', to: 'references#showall'
   get '/raw', to: 'file#downloadbibtex'
   post '/search', to: 'search#index'
+  get '/search', to: 'references#index'
   get '/createanynew', to: 'references#createanynew'
 
 
