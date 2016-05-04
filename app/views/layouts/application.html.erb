@@ -18,6 +18,7 @@
   <%= form_tag('/search')  do %>
       <%= text_field_tag 'search', params[:search], :placeholder => "\"Jussi\" or \"kalastajan Päiväkirja\""%>
       <%= submit_tag "Search", :name => "search"  %>
+
   <% end %>
 </div>
 
