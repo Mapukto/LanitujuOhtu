@@ -1,4 +1,5 @@
 Given /^I fill 'Jeesus' in search field$/ do
+  save_and_open_page
   fill_in 'search', :with => "Jeesus"
 end
 

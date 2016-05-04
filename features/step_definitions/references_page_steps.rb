@@ -1,8 +1,8 @@
 When /^there exists references in the database$/ do
-#  Article.create author:"Rotta", title:"Pilaantuneiden elintarvikkeiden hyötykäyttö", journal:"Kaatopaikka ympäristöystävällisen kierrätyksen lähtökohtana", year:1998
-#  Book.create title: "Nimi", publisher:"Joku", year:1999, author:"Kirjailija"
-#  Inproceeding.create author:"Kivi", title:"Muuttolinnut pohjoisen pallonpuoliskon illassa", booktitle:"Jeesus", year:2004, tags:"lehmä"
-#  visit root_path
+  Article.create author:"Rotta", title:"Pilaantuneiden elintarvikkeiden hyötykäyttö", journal:"Kaatopaikka ympäristöystävällisen kierrätyksen lähtökohtana", year:"1998"
+  Book.create title: "Nimi", publisher:"Joku", year:"1999", author:"Kirjailija"
+  Inproceeding.create author:"Kivi", title:"Muuttolinnut pohjoisen pallonpuoliskon illassa", booktitle:"Jeesus", year:"2004", tags:"lehmä"
+  visit root_path
 end
 
 Then /^Page should show bibtexts for all references$/ do
