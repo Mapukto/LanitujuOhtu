@@ -16,14 +16,14 @@ class Inproceeding < ActiveRecord::Base
   s << "\ttitle = {" << self.title << "},\n" 
   s << "\tbooktitle = {" << self.booktitle << "},\n" 
   s << "\tyear = {" << self.year.to_s << "},\n"
-  s << "\teditor = {" << self.editor << "},\n" unless self.editor == ""
-  s << "\tpages = {" << self.pages << "},\n"   unless self.pages == ""
-  s << "\torganization = {" << self.organization << "},\n" unless self.organization == ""
-  s << "\tpublisher = {" << self.publisher << "},\n" unless self.publisher == ""
-  s << "\taddress = {" << self.address << "},\n" unless self.address == ""
-  s << "\tmonth = {" << self.month << "},\n" unless self.month == ""
-  s << "\tnote = {" << self.note << "},\n" unless self.note == ""
-  s << "\tikey = {" << self.ikey << "},\n" unless self.ikey == ""
+  s << "\teditor = {" << self.editor << "},\n" unless self.editor == "" unless self.editor.nil?
+  s << "\tpages = {" << self.pages << "},\n"   unless self.pages == "" unless self.pages.nil?
+  s << "\torganization = {" << self.organization << "},\n" unless self.organization == "" unless self.organization.nil?
+  s << "\tpublisher = {" << self.publisher << "},\n" unless self.publisher == "" unless self.publisher.nil?
+  s << "\taddress = {" << self.address << "},\n" unless self.address == "" unless self.address.nil?
+  s << "\tmonth = {" << self.month << "},\n" unless self.month == "" unless self.month.nil?
+  s << "\tnote = {" << self.note << "},\n" unless self.note == "" unless self.note.nil?
+  s << "\tikey = {" << self.ikey << "},\n" unless self.ikey == "" unless self.ikey.nil?
   
   s << "}\n"
   

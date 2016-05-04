@@ -16,12 +16,12 @@ class Article < ActiveRecord::Base
     s << "\ttitle = {" << self.title << "},\n" 
     s << "\tjournal = {" << self.journal << "},\n" 
     s << "\tyear = {" << self.year.to_s << "},\n"
-    s << "\tvolume = {" << self.volume << "},\n" unless self.volume == ""
-    s << "\tnumber = {" << self.number << "},\n" unless self.number == ""
-    s << "\tpages = {" << self.pages << "},\n" unless self.pages == ""
-    s << "\tmonth = {" << self.month << "},\n" unless self.month == ""
-    s << "\tnote = {" << self.note << "},\n" unless self.note == ""
-    s << "\tkey = {" << self.akey << "},\n" unless self.akey == ""
+    s << "\tvolume = {" << self.volume << "},\n" unless self.volume == "" unless self.volume.nil?
+    s << "\tnumber = {" << self.number << "},\n" unless self.number == "" unless self.number.nil?
+    s << "\tpages = {" << self.pages << "},\n" unless self.pages == ""    unless self.pages.nil?
+    s << "\tmonth = {" << self.month << "},\n" unless self.month == ""    unless self.month.nil?
+    s << "\tnote = {" << self.note << "},\n" unless self.note == ""       unless self.note.nil?
+    s << "\tkey = {" << self.akey << "},\n" unless self.akey == ""        unless self.akey.nil?
     s << "}\n"
     
 

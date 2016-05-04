@@ -22,3 +22,4 @@ Feature: Inproceedings Page
     When I press 'destroy' button
     Then The list of inproceedings should not show created inproceeding
 
+  
