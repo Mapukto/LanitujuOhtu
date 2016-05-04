@@ -21,7 +21,5 @@ class SearchController < ApplicationController
         @search.push i
       end
     end
-
-
   end
 end
